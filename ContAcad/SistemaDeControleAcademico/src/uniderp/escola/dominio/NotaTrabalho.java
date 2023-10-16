@@ -1,0 +1,31 @@
+package uniderp.escola.dominio;
+
+public class NotaTrabalho {
+    private Aluno aluno;
+    private Trabalho trabalho;
+    private double nota;
+    public Aluno getAluno() {
+        return aluno;
+    }
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
+    public Trabalho getTrabalho() {
+        return trabalho;
+    }
+    public void setTrabalho(Trabalho trabalho) {
+        this.trabalho = trabalho;
+    }
+    public double getNota() {
+        return nota;
+    }
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+    public NotaTrabalho(Aluno aluno, Trabalho trabalho, double nota) {
+        this.aluno = aluno;
+        this.trabalho = trabalho;
+        this.nota = nota;
+    }
+    
+}
