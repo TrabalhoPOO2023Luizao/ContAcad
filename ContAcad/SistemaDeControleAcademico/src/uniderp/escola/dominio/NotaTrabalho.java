@@ -1,6 +1,6 @@
 package uniderp.escola.dominio;
 
-public class NotaTrabalho {
+public class NotaTrabalho extends BaseIdentificador{
     private Aluno aluno;
     private Trabalho trabalho;
     private double nota;
@@ -22,10 +22,12 @@ public class NotaTrabalho {
     public void setNota(double nota) {
         this.nota = nota;
     }
-    public NotaTrabalho(Aluno aluno, Trabalho trabalho, double nota) {
+    public NotaTrabalho(int codigo, Aluno aluno, Trabalho trabalho, double nota) {
+        super(codigo);
         this.aluno = aluno;
         this.trabalho = trabalho;
         this.nota = nota;
     }
+    
     
 }
