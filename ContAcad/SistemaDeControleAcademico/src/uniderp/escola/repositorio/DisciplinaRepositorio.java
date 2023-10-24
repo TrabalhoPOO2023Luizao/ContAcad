@@ -1,6 +1,5 @@
 package uniderp.escola.repositorio;
 
-import uniderp.escola.dominio.Aluno;
 import uniderp.escola.dominio.Disciplina;
 import uniderp.escola.fakeDB.DisciplinaFakeDB;
 

@@ -1,6 +1,5 @@
 package uniderp.escola.repositorio;
 
-import uniderp.escola.dominio.Aluno;
 import uniderp.escola.dominio.RendimentoEscola;
 import uniderp.escola.fakeDB.RendimentoEscolaFakeDB;
 
@@ -38,13 +37,9 @@ extends BaseGenericaRepositorio<RendimentoEscolaFakeDB, RendimentoEscola> {
     }
 
     @Override
-    public RendimentoEscola Delete(int codigo) {
-        public RendimentoEscola Delete(int codigo) {
-            Aluno alvo = this.Read(codigo);
+    public RendimentoEscola Delete(int codigo) { 
+        RendimentoEscola alvo = this.Read(codigo);
             this.dataset.remove(alvo);
             return alvo;
-        }
-    }
-
-    
+    }   
 }
