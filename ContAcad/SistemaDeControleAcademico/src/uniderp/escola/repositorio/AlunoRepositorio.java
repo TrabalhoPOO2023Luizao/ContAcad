@@ -6,6 +6,11 @@ import uniderp.escola.fakeDB.AlunoFakeDB;
 public class AlunoRepositorio 
 extends BaseGenericaRepositorio <AlunoFakeDB, Aluno>{
 
+    public AlunoRepositorio(){
+        this.db = new AlunoFakeDB();
+        this.dataset = this.db.gettabela();
+    }
+
     @Override
     public Aluno Create(Aluno item) {
         int tam = this.dataset.size()-1;
