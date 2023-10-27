@@ -10,6 +10,7 @@ public class TrabalhoFakeDB extends BaseGenericaFakeDB<Trabalho> {
     protected void CarregarDados() {
         this.tabela = new ArrayList<Trabalho>();
     }
+        
     public TrabalhoFakeDB(){
         super();
     }
