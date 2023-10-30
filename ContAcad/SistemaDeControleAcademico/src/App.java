@@ -30,13 +30,8 @@ public class App {
 
         // TrabalhoFakeDB trab = new TrabalhoFakeDB();
 
-        NotaTrabalhoFakeDB  nota = new NotaTrabalhoFakeDB();
 
-        int i;
-        for(i=0;i<nota.gettabela().size();i++){
-            if(nota.gettabela().get(i).getAluno().getCodigo() == 1){
-                System.out.println(" - Notas do Eber: " + nota.gettabela().get(i).getNota());
-            }
-        }
+        Menu menu = new Menu();
+        menu.Executar();
     }
 }

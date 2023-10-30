@@ -23,5 +23,6 @@ public class AlunoFakeDB extends BaseGenericaFakeDB<Aluno>{
     }
     public AlunoFakeDB(){
         super();
+        CarregarDados();
     }
 }
