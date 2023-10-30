@@ -5,10 +5,6 @@ import java.time.LocalDate;
 public class Professor extends BasePessoa {
     
     private String cargo;
-    
-    @Override
-    public void Imprimir() {
-    }
 
     public String getCargo() {
         return cargo;
@@ -16,6 +12,13 @@ public class Professor extends BasePessoa {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    public void IImprimir(){
+        System.err.println(getCodigo());
+        System.err.println(getNome());
+        System.err.println(getDataNascimento());
+        System.err.println(getCargo());
     }
 
     public Professor(int codigo, String nome, LocalDate dataNascimento, String nomeUsuario, String senha,

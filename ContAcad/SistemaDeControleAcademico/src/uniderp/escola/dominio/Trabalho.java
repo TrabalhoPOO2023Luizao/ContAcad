@@ -3,6 +3,7 @@ package uniderp.escola.dominio;
 public class Trabalho extends BaseIdentificador {
     private Disciplina disciplina;
     private String descricao;
+    
     public Disciplina getDisciplina() {
         return disciplina;
     }

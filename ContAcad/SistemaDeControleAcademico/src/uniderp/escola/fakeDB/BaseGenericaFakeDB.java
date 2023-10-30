@@ -11,10 +11,10 @@ public abstract class BaseGenericaFakeDB<TDom> {
         }
         return this.tabela;
     }
+    
     protected abstract void CarregarDados();
 
     public BaseGenericaFakeDB(){
         this.tabela = new ArrayList<TDom>();
-        this.CarregarDados();
     }
 }

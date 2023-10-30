@@ -2,7 +2,7 @@ package uniderp.escola.dominio;
 
 import java.time.LocalDate;
 
-public abstract class BasePessoa extends BaseNome implements IImpressao{
+public abstract class BasePessoa extends BaseNome{
     
     protected LocalDate dataNascimento;
     protected String nomeUsuario;

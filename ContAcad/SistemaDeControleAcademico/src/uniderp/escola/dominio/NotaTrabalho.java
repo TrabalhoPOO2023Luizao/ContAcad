@@ -4,6 +4,7 @@ public class NotaTrabalho extends BaseIdentificador{
     private Aluno aluno;
     private Trabalho trabalho;
     private double nota;
+    
     public Aluno getAluno() {
         return aluno;
     }
@@ -22,6 +23,9 @@ public class NotaTrabalho extends BaseIdentificador{
     public void setNota(double nota) {
         this.nota = nota;
     }
+
+    
+
     public NotaTrabalho(int codigo, Aluno aluno, Trabalho trabalho, double nota) {
         super(codigo);
         this.aluno = aluno;

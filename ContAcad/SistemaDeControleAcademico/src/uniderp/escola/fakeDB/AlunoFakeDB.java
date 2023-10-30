@@ -10,7 +10,16 @@ public class AlunoFakeDB extends BaseGenericaFakeDB<Aluno>{
     @Override
     protected void CarregarDados() {
         this.tabela = new ArrayList<Aluno>();
-        this.tabela.add(new Aluno(1, "eber", LocalDate.of(2001, 02, 22), "eberrennan", "1234", 01));
+        Aluno eber = new Aluno(1, "Eber", LocalDate.of(2004, 02, 22), "eberrennan", "1234", 01);
+        Aluno allan = new Aluno(3, "Allan", LocalDate.of(2004, 9, 02), "AllanAugusto", "1234", 01);
+        Aluno diogo = new Aluno(4, "Diogo", LocalDate.of(2003, 02, 22), "Diogo", "1234", 01);
+        Aluno breno = new Aluno(5, "Breno", LocalDate.of(2004, 02, 22), "Brenin", "1234", 01);
+        
+        tabela.add(eber);
+        tabela.add(allan);
+        tabela.add(diogo);
+        tabela.add(breno);
+       
     }
     public AlunoFakeDB(){
         super();

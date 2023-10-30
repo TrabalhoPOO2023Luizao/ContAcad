@@ -1,29 +1,32 @@
 package uniderp.escola.dominio;
 
+import java.util.ArrayList;
+
 public class Turma extends BaseIdentificador {
     private int capacidadeTurma;
-    private Disciplina disciplina;
-    private Professor professor;
+    private ArrayList<Disciplina> disciplina;
+    private ArrayList<Professor> professor;
+    
     public int getCapacidadeTurma() {
         return capacidadeTurma;
     }
     public void setCapacidadeTurma(int capacidadeTurma) {
         this.capacidadeTurma = capacidadeTurma;
     }
-    public Disciplina getDisciplina() {
+    public ArrayList<Disciplina> getDisciplina() {
         return disciplina;
     }
-    public void setDisciplina(Disciplina disciplina) {
+    public void setDisciplina(ArrayList<Disciplina> disciplina) {
         this.disciplina = disciplina;
     }
-    public Professor getProfessor() {
+    public ArrayList<Professor> getProfessor() {
         return professor;
     }
-    public void setProfessor(Professor professor) {
+    public void setProfessor(ArrayList<Professor> professor) {
         this.professor = professor;
     }
     
-    public Turma(int codigo, int capacidadeTurma, Disciplina disciplina, Professor professor) {
+    public Turma(int codigo, int capacidadeTurma, ArrayList<Disciplina> disciplina, ArrayList<Professor> professor) {
         super(codigo);
         this.capacidadeTurma = capacidadeTurma;
         this.disciplina = disciplina;
