@@ -37,19 +37,16 @@ public class NotaTrabalhoFakeDB extends BaseGenericaFakeDB<NotaTrabalho> {
             if(trab.getDisciplina().getCodigo() == 1){
                 trabalhosMat.add(trab);
             }
-            if(trab.getDisciplina().getCodigo() == 2){
+            else if(trab.getDisciplina().getCodigo() == 2){
                 trabalhosPort.add(trab);
             }
-            if(trab.getDisciplina().getCodigo() == 3){
+            else if(trab.getDisciplina().getCodigo() == 3){
                 trabalhosIng.add(trab);
             }
-            if(trab.getDisciplina().getCodigo() == 4){
+            else if(trab.getDisciplina().getCodigo() == 4){
                 trabalhosGeo.add(trab);
             }
         }
-       
-        this.tabela = new ArrayList<NotaTrabalho>();
-
         for(i=0; i < alunos.size(); i++){
             for(j = 0; j < trabalhosMat.size(); j++){
                     NotaTrabalho NotaMat = new NotaTrabalho(i, alunos.get(i), trabalhosMat.get(j), random.nextDouble(11));
