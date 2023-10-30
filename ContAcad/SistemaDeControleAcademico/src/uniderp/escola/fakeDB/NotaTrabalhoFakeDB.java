@@ -34,16 +34,16 @@ public class NotaTrabalhoFakeDB extends BaseGenericaFakeDB<NotaTrabalho> {
         int i, j;
 
         for(Trabalho trab : trabalhos){
-            if(trab.getCodigo() == 1){
+            if(trab.getDisciplina().getCodigo() == 1){
                 trabalhosMat.add(trab);
             }
-            if(trab.getCodigo() == 2){
+            if(trab.getDisciplina().getCodigo() == 2){
                 trabalhosPort.add(trab);
             }
-            if(trab.getCodigo() == 3){
+            if(trab.getDisciplina().getCodigo() == 3){
                 trabalhosIng.add(trab);
             }
-            if(trab.getCodigo() == 4){
+            if(trab.getDisciplina().getCodigo() == 4){
                 trabalhosGeo.add(trab);
             }
         }
@@ -52,20 +52,20 @@ public class NotaTrabalhoFakeDB extends BaseGenericaFakeDB<NotaTrabalho> {
 
         for(i=0; i < alunos.size(); i++){
             for(j = 0; j < trabalhosMat.size(); j++){
-                    NotaTrabalho NotaMat = new NotaTrabalho(i, alunos.get(i), trabalhosMat.get(j), random.nextInt(11));
+                    NotaTrabalho NotaMat = new NotaTrabalho(i, alunos.get(i), trabalhosMat.get(j), random.nextDouble(11));
                     tabela.add(NotaMat);
             }
             for(j = 0; j < trabalhosPort.size(); j++){
-                    NotaTrabalho NotaPort = new NotaTrabalho(i, alunos.get(i), trabalhosPort.get(j), random.nextInt(11));
+                    NotaTrabalho NotaPort = new NotaTrabalho(i, alunos.get(i), trabalhosPort.get(j), random.nextDouble(11));
                     tabela.add(NotaPort);
             }
             for(j = 0; j < trabalhosIng.size(); j++){
                 
-                    NotaTrabalho NotaIng = new NotaTrabalho(i, alunos.get(i), trabalhosIng.get(j), random.nextInt(11));
+                    NotaTrabalho NotaIng = new NotaTrabalho(i, alunos.get(i), trabalhosIng.get(j), random.nextDouble(11));
                     tabela.add(NotaIng);
             }    
             for(j = 0; j < trabalhosGeo.size(); j++){
-                    NotaTrabalho NotaGeo = new NotaTrabalho(i, alunos.get(i), trabalhosGeo.get(j), random.nextInt(11));
+                    NotaTrabalho NotaGeo = new NotaTrabalho(i, alunos.get(i), trabalhosGeo.get(j), random.nextDouble(11));
                     tabela.add(NotaGeo);
             }
         }

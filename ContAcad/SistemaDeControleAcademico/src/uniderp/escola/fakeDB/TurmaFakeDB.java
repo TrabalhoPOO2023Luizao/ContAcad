@@ -33,10 +33,10 @@ public class TurmaFakeDB extends BaseGenericaFakeDB<Turma>{
         Turma Sonserina = new Turma(4, 30, disciplinas, professores);
         
 
-        tabela.add(Sonserina);
-        tabela.add(Corvinal);
-        tabela.add(LufaLufa);
         tabela.add(Grifinoria);
+        tabela.add(LufaLufa);
+        tabela.add(Corvinal);
+        tabela.add(Sonserina);
 
     }
   
