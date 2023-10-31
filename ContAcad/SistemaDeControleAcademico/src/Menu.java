@@ -86,8 +86,11 @@ public class Menu {
         NotaTrabalhoServico nota = new NotaTrabalhoServico();
 
         for(int i = 0; i < 4; i++){
-        System.out.printf("%s - %.2f - %s\n", nota.Listar().get(i).getAluno().getNome(), nota.Listar().get(i).getNota(), nota.Listar().get(i).getTrabalho().getDisciplina().getNome());
-        }
+            System.out.printf("%s - %.2f - %s\n", 
+            aluno.Listar().get(selectTurma).getNome(),
+            nota.Listar().get(i).getNota(), 
+            turmas.Listar().get(iprof).getDisciplina().get(iprof).getNome());
+            }
     }
 
 
