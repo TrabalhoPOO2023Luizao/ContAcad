@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import uniderp.escola.dominio.Aluno;
 import uniderp.escola.dominio.NotaTrabalho;
 import uniderp.escola.dominio.Turma;
 import uniderp.escola.fakeDB.TurmaFakeDB;
@@ -82,7 +83,7 @@ public class Menu {
         System.out.println("\n"+ 1+ "-" + aluno.Listar().get(selectTurma).getNome() +"\n");
         
 
-        int alunoSelecionado = aluno.Listar().get(selectTurma).getCodigo();
+        //int alunoSelecionado = aluno.Listar().get(selectTurma).getCodigo();
 
 
         NotaTrabalhoServico nota = new NotaTrabalhoServico();
@@ -103,13 +104,11 @@ public class Menu {
         List<String> nomeTurmas = Arrays.asList("Grifinoria", "LufaLufa", "Corvinal", "Sonserina");
 
         TurmaServico turmas = new TurmaServico();
+        AlunoServico aluno2 = new AlunoServico();
 
-         if(turmas.Listar().get(0).getProfessor().get(iAluno).getCodigo() == aluno){
-         System.out.println(turmas.Listar().get(iAluno).getCodigo() + " - " + nomeTurmas.get(iAluno)+"\n");
+        if(turmas.Listar().get(0).getProfessor().get(iAluno).getCodigo() == aluno){
+            System.out.println(turmas.Listar().get(iAluno).getCodigo() + " - " +aluno2.Listar().get(iAluno).getNome() +" - "+ nomeTurmas.get(iAluno)+"\n");
         }
-        
-        System.out.println("Disciplinas que o aluno cursa\n");
-
         DisciplinaServico disciplinas = new DisciplinaServico();
 
         for(int i=0; i < 4; i++){
@@ -122,19 +121,19 @@ public class Menu {
         NotaTrabalhoServico notas = new NotaTrabalhoServico();
         RendimentoEscolaSevico notas2 = new RendimentoEscolaSevico();
 
-        System.out.printf("%.2f\n",notas2.Listar().get(selectDisci).getNotaPrimeiraProva());
-        System.out.printf("%.2f\n",notas2.Listar().get(selectDisci).getNotaSegundaProva());
+        System.out.printf("Primeira Prova - %.2f\n",notas2.Listar().get(selectDisci).getNotaPrimeiraProva());
+        System.out.printf("Segunda Prova - %.2f\n",notas2.Listar().get(selectDisci).getNotaSegundaProva());
 
 
-        System.out.println("\nNotas na disciplina\n");
+        System.out.println("\nNotas dos trabalhos\n");
 
         for(int i=0; i<4;i++){
             System.out.printf("%.2f\n",notas.Listar().get(i).getNota());
         }
 
-        System.out.printf("%.2f\n",notas2.Listar().get(selectDisci).getMediaTrabalhos());
-        System.out.printf("%.2f\n",notas2.Listar().get(selectDisci).getMediaGeral());
 
-        
+        System.out.printf("\nMedia dos trabalhos - %.2f\n",notas2.Listar().get(selectDisci).getMediaTrabalhos());
+        System.out.printf("Media Geral - %.2f\n",notas2.Listar().get(selectDisci).getMediaGeral());
+
     }
 }
