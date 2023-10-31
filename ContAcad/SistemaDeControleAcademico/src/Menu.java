@@ -1,12 +1,9 @@
-import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import uniderp.escola.dominio.Aluno;
-import uniderp.escola.dominio.NotaTrabalho;
-import uniderp.escola.dominio.Turma;
-import uniderp.escola.fakeDB.TurmaFakeDB;
+
 import uniderp.escola.servico.AlunoServico;
 import uniderp.escola.servico.DisciplinaServico;
 import uniderp.escola.servico.NotaTrabalhoServico;
